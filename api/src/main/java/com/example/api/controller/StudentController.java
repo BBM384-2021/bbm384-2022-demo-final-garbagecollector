@@ -18,7 +18,7 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @PostMapping()
+    @PostMapping(path = "post")
     public Student addNewStudent(@RequestBody Student student){
 
         return studentService.addStudent(student);
