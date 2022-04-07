@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9961a96c-38e4-4a4b-b5f3-16c68fe20a12" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/classes/com/example/api/ApiApplication.class" beforeDir="false" />
@@ -13,6 +14,11 @@
       <change beforePath="$PROJECT_DIR$/api/target/classes/com/example/api/repository/StudentRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/classes/com/example/api/service/StudentService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/test-classes/com/example/api/ApiApplicationTests.class" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,8 +158,8 @@
       <method v="2" />
     </configuration>
     <configuration name="ApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.api.ApiApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,8 +203,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649288288832</updated>
+<<<<<<< Updated upstream
       <workItem from="1649288293287" duration="4761000" />
       <workItem from="1649296271644" duration="339000" />
+=======
+      <workItem from="1649288293287" duration="5003000" />
+      <workItem from="1649295565063" duration="65000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>

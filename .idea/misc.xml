@@ -14,5 +14,11 @@
   </component>
 =======
   <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="true" project-jdk-name="12" project-jdk-type="JavaSDK" />
+<<<<<<< Updated upstream
 >>>>>>> bbf13ab (.)
+=======
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+>>>>>>> Stashed changes
 </project>
