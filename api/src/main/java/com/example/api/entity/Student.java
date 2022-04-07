@@ -9,15 +9,7 @@ import java.util.Date;
 @Entity
 public class Student {
     @Id
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "Ikm_Araba"
-    )
-    @SequenceGenerator(
-            name = "Ikm_Araba",
-            sequenceName = "Ikm_Araba",
-            allocationSize = 1
-    )
+
     private Long id;
     private String userName;
     private String fullName;
