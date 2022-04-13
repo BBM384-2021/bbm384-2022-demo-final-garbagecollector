@@ -1,7 +1,7 @@
-package com.arjuncodes.studentsystem.service;
+package gcDemo.service;
 
-import com.arjuncodes.studentsystem.model.User;
-import com.arjuncodes.studentsystem.repository.UserRepository;
+import gcDemo.model.User;
+import gcDemo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

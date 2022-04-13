@@ -1,6 +1,6 @@
-package com.arjuncodes.studentsystem.repository;
+package gcDemo.repository;
 
-import com.arjuncodes.studentsystem.model.User;
+import gcDemo.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

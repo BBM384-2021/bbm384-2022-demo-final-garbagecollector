@@ -1,4 +1,4 @@
-package com.arjuncodes.studentsystem.model;
+package gcDemo.model;
 
 import javax.persistence.*;
 

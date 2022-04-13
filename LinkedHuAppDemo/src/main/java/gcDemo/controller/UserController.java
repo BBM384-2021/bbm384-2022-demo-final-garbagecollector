@@ -1,8 +1,8 @@
-package com.arjuncodes.studentsystem.controller;
+package gcDemo.controller;
 
 
-import com.arjuncodes.studentsystem.model.User;
-import com.arjuncodes.studentsystem.service.UserService;
+import gcDemo.model.User;
+import gcDemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
