@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FullStackApp-master/LinkedHuDemo.iml" filepath="$PROJECT_DIR$/FullStackApp-master/LinkedHuDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/bbm384-2022-demo-final-garbagecollector.iml" filepath="$PROJECT_DIR$/.idea/bbm384-2022-demo-final-garbagecollector.iml" />
-
+      <module fileurl="file://$PROJECT_DIR$/FullStackApp-master/demo.iml" filepath="$PROJECT_DIR$/FullStackApp-master/demo.iml" />
     </modules>
   </component>
 </project>
