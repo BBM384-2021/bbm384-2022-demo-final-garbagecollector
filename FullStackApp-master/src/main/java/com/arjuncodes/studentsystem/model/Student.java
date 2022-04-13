@@ -9,18 +9,15 @@ import javax.persistence.Id;
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String name;
     private String address;
 
-    public Student() {
-    }
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -39,4 +36,8 @@ public class Student {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public Student() {
+    }
+
 }
