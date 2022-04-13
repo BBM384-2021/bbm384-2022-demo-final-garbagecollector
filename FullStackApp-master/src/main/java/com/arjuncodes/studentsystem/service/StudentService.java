@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface StudentService {
     public Student saveStudent(Student student);
-    Student getById(int id);
+    Student getById(Long id);
     public List<Student> getAllStudents();
 }
 
