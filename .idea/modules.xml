@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FullStackApp-master/LinkedHuDemo.iml" filepath="$PROJECT_DIR$/FullStackApp-master/LinkedHuDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/bbm384-2022-demo-final-garbagecollector.iml" filepath="$PROJECT_DIR$/.idea/bbm384-2022-demo-final-garbagecollector.iml" />
+
     </modules>
   </component>
 </project>
