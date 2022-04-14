@@ -18,7 +18,7 @@ public class User {
     @Column(name = "Admin")
     private boolean admin;
     @Column(name = "Type")
-    private String type;
+    private String userType;
 
     public User() {
     }
@@ -31,12 +31,12 @@ public class User {
         this.admin = admin;
     }
 
-    public User(String username, String password, String email, String type) {
+    public User(String username, String password, String email, String userType) {
         this.username = username;
         this.password = password;
         this.email = email;
         this.admin = false;
-        this.type = type;
+        this.userType = userType;
     }
 
     public boolean isAdmin() {
@@ -79,12 +79,12 @@ public class User {
         this.email = email;
     }
 
-    public String getType() {
-        return type;
+    public String getUserType() {
+        return userType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setUserType(String type) {
+        this.userType = type;
     }
 
     @Override

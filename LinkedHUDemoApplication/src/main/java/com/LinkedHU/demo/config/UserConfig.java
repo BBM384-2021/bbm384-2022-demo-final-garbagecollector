@@ -12,11 +12,11 @@ public class UserConfig {
     CommandLineRunner clr (UserRepository userRepository){
         return args -> {
           User admin = new User(
-                  "Admin",
-                  "Admin",
-                  "admin@dkuzmyk.com",
-                  true
-          );
+                    "Admin",
+                    "Admin",
+                    "admin@linkedHU.com",
+                    true
+            );
           userRepository.save(admin);
         };
     }

@@ -129,6 +129,10 @@ public class UserServiceImp implements UserService{
             obj.get().setPassword(user.getPassword());
         }
 
+        if(!obj.get().getUserType().equals(user.getUserType()) && user.getUserType() != null){
+            obj.get().setUserType(user.getUserType());
+        }
+
     }
 
     @Override
