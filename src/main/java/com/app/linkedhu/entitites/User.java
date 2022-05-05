@@ -1,12 +1,12 @@
 package com.app.linkedhu.entitites;
 
-import lombok.Data;
+//import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Table
-@Data
+//@Data
 public class User {
     @Id
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
