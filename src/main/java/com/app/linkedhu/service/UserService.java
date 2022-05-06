@@ -22,12 +22,14 @@ public class UserService {
     public User getOneUserById(Long userId) {
         return userRepository.getById(userId);
     }
-
+    public User getOneUserByUserName(String userName) {
+        return userRepository.getByUserName(userName);
+    }
     public User updateOneUser(Long userId, User newUser) {
         Optional<User> user = Optional.of(userRepository.getById(userId));
         if(user.isPresent()){
             User foundUser = user.get();
-            foundUser.setUsername(newUser.getUsername());
+            foundUser.setUserName(newUser.getUserName());
             foundUser.setPassword(newUser.getPassword());
             foundUser.setEmail(newUser.getEmail());
             foundUser.setUserType(newUser.getUserType());
@@ -41,5 +43,11 @@ public class UserService {
 
     public void deleteById(Long userId) {
         userRepository.deleteById(userId);
+    }
+
+
+    public User getOneUserByEmail(String email) {
+        return userRepository.getByEmail(email);
+
     }
 }

@@ -1,6 +1,7 @@
 package com.app.linkedhu.entitites;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -14,6 +15,7 @@ public class Post {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="user_id", nullable=false)
     @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     User user;
     String title;
     //@Column(columnDefinition = "text")

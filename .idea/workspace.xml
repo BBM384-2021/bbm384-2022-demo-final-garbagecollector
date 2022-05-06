@@ -4,7 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="166f13ca-8514-4891-b24e-c3e32dacb1c7" name="Changes" comment="new classes" />
+    <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/786c5d49-99d9-4565-a2f9-d5270da135e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/786c5d49-99d9-4565-a2f9-d5270da135e8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LinkedHU.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/LikesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/LinkedHuApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/LinkedHuApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Likes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Likes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/CommentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/LikesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/PostRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/PostCreateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/PostCreateRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/PostUpdateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/PostUpdateRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/app/linkedhu/LinkedHuApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/app/linkedhu/LinkedHuApplicationTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +49,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="com.haulmont.jpb.JpaEntity" />
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -22,10 +56,18 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="cato" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -49,11 +91,12 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="28ItjyTfUPFCUqh47LofHPgTMB3" />
+  <component name="ProjectId" id="28jyPAH8rSRXyIQmdSoildYXEtR" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -62,7 +105,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -71,49 +113,43 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.LinkedHuApplication">
     <configuration name="LinkedHuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="LinkedHU" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.app.linkedhu.LinkedHuApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LinkedhuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="linkedhu" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.app.linkedhu.LinkedhuApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.LinkedHuApplication" />
+      <item itemvalue="Spring Boot.LinkedhuApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="166f13ca-8514-4891-b24e-c3e32dacb1c7" name="Changes" comment="" />
-      <created>1650916076359</created>
+      <changelist id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="" />
+      <created>1651744266776</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1650916076359</updated>
-      <workItem from="1650916101217" duration="442000" />
-      <workItem from="1650916808985" duration="1241000" />
-      <workItem from="1651058410817" duration="2697000" />
-      <workItem from="1651065887240" duration="8988000" />
-      <workItem from="1651774301103" duration="2589000" />
+      <updated>1651744266776</updated>
+      <workItem from="1651744268293" duration="720000" />
+      <workItem from="1651868736192" duration="3063000" />
     </task>
-    <task id="LOCAL-00001" summary="sa">
-      <created>1650917286530</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1650917286530</updated>
-    </task>
-    <task id="LOCAL-00002" summary="new classes">
-      <created>1651779992882</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1651779992882</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,27 +160,10 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="sa" />
-    <MESSAGE value="new classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="new classes" />
   </component>
 </project>

@@ -7,7 +7,6 @@ import com.app.linkedhu.request.PostCreateRequest;
 import com.app.linkedhu.request.PostUpdateRequest;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +15,12 @@ public class PostService {
 
     private PostRepository postRepository;
     private UserService userService;
+
+    public PostService(PostRepository postRepository, UserService userService) {
+        this.postRepository = postRepository;
+        this.userService = userService;
+    }
+
     public List<Post> getAllPosts(Optional<Long> userId) {
         if(userId.isPresent()){
             return postRepository.findByUserId(userId.get());
