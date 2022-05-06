@@ -4,16 +4,14 @@ import com.app.linkedhu.entitites.User;
 import com.app.linkedhu.request.UserLoginRequest;
 import com.app.linkedhu.request.UserRegisterRequest;
 import com.app.linkedhu.service.UserServiceImpl;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin
 public class AuthController {
     private final UserServiceImpl userService;
 
@@ -23,22 +21,22 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody UserLoginRequest userLoginRequest){
+    public User login(@RequestBody UserLoginRequest userLoginRequest){
         Optional<User> user = Optional.ofNullable(userService.getOneUserByName(userLoginRequest.getUserName()));
         if (user.isPresent()){
             User foundUser = user.get();
             if (foundUser.getPassword().equals(userLoginRequest.getPassword())){
-                return "Login is successful";
+                return foundUser;
             }else {
-                return "Password not match";
+                return null;
             }
         }
         else
-            return "User not found";
+            return null;
     }
 
     @PostMapping("/register")
-    public String register(@RequestBody UserRegisterRequest userRegisterRequest){
+    public User register(@RequestBody UserRegisterRequest userRegisterRequest){
         User user = new User();
         if (userRegisterRequest.getPassword().equals(userRegisterRequest.getConfirmPassword())){
             user.setUserName(userRegisterRequest.getUserName());
@@ -46,9 +44,9 @@ public class AuthController {
             user.setPassword(userRegisterRequest.getPassword());
             user.setUserType(userRegisterRequest.getUserType());
             userService.saveOneUser(user);
-            return "Register is successful";
+            return user;
         }else
-            return "Not registered";
+            return null;
 
 
     }

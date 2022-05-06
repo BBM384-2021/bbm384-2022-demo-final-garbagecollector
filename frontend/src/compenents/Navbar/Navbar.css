@@ -1,0 +1,15 @@
+.link{
+    text-decoration: none;
+    box-shadow: none;
+    color: white;
+}
+.tool{
+    color:rgb(58, 55, 55)
+}
+.title{
+    flex-grow: 1;
+    text-align: left;
+}
+.menu{
+    margin-right: 40%;
+}
