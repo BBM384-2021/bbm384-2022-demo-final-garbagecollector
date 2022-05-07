@@ -5,7 +5,7 @@ function User() {
 
     return (
         <div>
-            User!! {userId}
+            
         </div>
     );
 }

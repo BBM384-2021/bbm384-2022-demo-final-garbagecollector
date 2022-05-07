@@ -38,7 +38,7 @@ function Home() {
 
                 <Container fixed className="container">
                     {userList.map((user) =>
-                        <Post name={user.productName} price={user.unitPrice}></Post>
+                        <Post name={user.userName} price={user.email}></Post>
                     )}
                 </Container>
             

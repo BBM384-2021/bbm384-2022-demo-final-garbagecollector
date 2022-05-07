@@ -30,13 +30,21 @@ function Auth() {
         })
     };
     const sendRequest = (path) => {
-        fetch('http://localhost:8080/auth/register', requestOptions)
+        fetch('http://localhost:8080/auth/' + path, requestOptions)
             .then(response => response.json())
-            .then(data => { console.log(data) });
+            .then(data => { console.log(data) 
+                localStorage.setItem("tokenKey",data.accessToken);
+                            localStorage.setItem("refreshKey",data.refreshToken);
+                            localStorage.setItem("currentUser",data.id);
+                            localStorage.setItem("userName",data.userName);
+            });
     }
 
     const handleButton = (path) => {
-        sendRequest(path)
+        sendRequest(path);
+        setUsername("")
+        setPassword("")
+        history.go("/auth")
 
     }
 

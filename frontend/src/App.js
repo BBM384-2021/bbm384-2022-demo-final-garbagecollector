@@ -1,22 +1,27 @@
 import Home from './compenents/Home/Home';
 import User from './compenents/User/User';
-import { Button,Navbar, } from 'react-bootstrap';
 import Auth from './compenents/Auth/Auth'
-/* import Navbar from './compenents/Navbar/Navbar'; */
+import Navbar from './compenents/Navbar/Navbar';
+
 
 import './App.css';
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route ,Redirect} from "react-router-dom";
 function App() {
-
 
   return (
     <div className="App">
       <BrowserRouter>
         <Navbar ></Navbar>
         <Switch>
-          <Route exact path='/' component={Home}></Route>
+          
+          <Route exact path="/">
+          {localStorage.getItem("currentUser") == null ? <Redirect to="/auth"/>: <Home/>}
+          
+          </Route>
           <Route exact path='/users' component={User}></Route>
-          <Route exact path='/auth' component={Auth}></Route>
+          <Route exact path="/auth">
+          {localStorage.getItem("currentUser") != null ? <Redirect to="/"/>: <Auth/>}
+          </Route>
 
         </Switch>
       </BrowserRouter>
