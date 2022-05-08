@@ -4,42 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/786c5d49-99d9-4565-a2f9-d5270da135e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/786c5d49-99d9-4565-a2f9-d5270da135e8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="jwt created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LinkedHU.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Likes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Likes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/LikesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/LikeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/request/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/request/UserRegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/security/JwtAuthenticationEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/security/JwtAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/security/JwtTokenProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/security/JwtUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/UserDetailsServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/LinkedHuApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/LinkedHuApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/config/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Likes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Likes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/CommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/CommentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/LikesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/PostRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/PostCreateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/PostCreateRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/PostUpdateRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/PostUpdateRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/app/linkedhu/LinkedHuApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/app/linkedhu/LinkedHuApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/UserRegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/UserRegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/security/JwtAuthenticationEntryPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/security/JwtAuthenticationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/security/JwtTokenProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/security/JwtUserDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/UserDetailsServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +105,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/a/questapp-main" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -148,8 +142,17 @@
       <option name="presentableId" value="Default" />
       <updated>1651744266776</updated>
       <workItem from="1651744268293" duration="720000" />
-      <workItem from="1651868736192" duration="3063000" />
+      <workItem from="1651868736192" duration="3387000" />
+      <workItem from="1651930256932" duration="10607000" />
     </task>
+    <task id="LOCAL-00001" summary="jwt created">
+      <created>1651872085938</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651872085938</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,5 +168,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="jwt created" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt created" />
   </component>
 </project>

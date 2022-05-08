@@ -3,14 +3,9 @@ package com.app.linkedhu.controller;
 import com.app.linkedhu.entitites.User;
 import com.app.linkedhu.request.UserLoginRequest;
 import com.app.linkedhu.request.UserRegisterRequest;
-import com.app.linkedhu.security.JwtTokenProvider;
 import com.app.linkedhu.service.UserService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,50 +17,45 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-    private AuthenticationManager authenticationManager;
-    private JwtTokenProvider jwtTokenProvider;
-    private UserService userService;
-    private PasswordEncoder passwordEncoder;
+    private final UserService userService;
 
-    public AuthController(AuthenticationManager authenticationManager, UserService userService,
-                          PasswordEncoder passwordEncoder, JwtTokenProvider jwtTokenProvider) {
-        this.authenticationManager = authenticationManager;
+    private PasswordEncoder passwordEncoder;
+    public AuthController(UserService userService) {
         this.userService = userService;
-        this.passwordEncoder = passwordEncoder;
-        this.jwtTokenProvider = jwtTokenProvider;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody UserLoginRequest loginRequest) {
-        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(loginRequest.getUserName(), loginRequest.getPassword());
-        Authentication auth = authenticationManager.authenticate(authToken);
-        SecurityContextHolder.getContext().setAuthentication(auth);
-        String jwtToken = jwtTokenProvider.generateJwtToken(auth);
-        return "Bearer " + jwtToken;
+    public String login(@RequestBody UserLoginRequest userLoginRequest){
+        Optional<User> user = Optional.ofNullable(userService.getOneUserByEmail(userLoginRequest.getUserName()));
+        if (user.isPresent()){
+            User foundUser = user.get();
+            if (foundUser.getPassword().equals(userLoginRequest.getPassword())){
+                return "Login is successful";
+            }else {
+                return "Password not match";
+            }
+        }
+        else
+            return "User not found";
     }
 
     @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody UserRegisterRequest userRegisterRequest) {
-        if(userService.getOneUserByEmail(userRegisterRequest.getEmail()) == null) {
-            return new ResponseEntity<>("email is already in use.", HttpStatus.BAD_REQUEST);
-        }
-
+    public String register(@RequestBody UserRegisterRequest userRegisterRequest){
         User user = new User();
-        user.setEmail(userRegisterRequest.getEmail());
-        user.setUserType(userRegisterRequest.getUserType());
         user.setUserName(userRegisterRequest.getUserName());
-        user.setPassword(passwordEncoder.encode(userRegisterRequest.getPassword()));
+        user.setEmail(userRegisterRequest.getEmail());
+        user.setPassword(userRegisterRequest.getPassword());
+        user.setUserType(userRegisterRequest.getUserType());
         userService.saveOneUser(user);
-        return new ResponseEntity<>("Register is successful", HttpStatus.CREATED);
-        //UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(registerRequest.getUserName(), registerRequest.getPassword());
-        //Authentication auth = authenticationManager.authenticate(authToken);
-        //SecurityContextHolder.getContext().setAuthentication(auth);
-        //String jwtToken = jwtTokenProvider.generateJwtToken(auth);
+        return "Register is successful";
 
-        //authResponse.setMessage("User successfully registered.");
-        //authResponse.setAccessToken("Bearer " + jwtToken);
-        //authResponse.setRefreshToken(refreshTokenService.createRefreshToken(user));
-        //authResponse.setUserId(user.getId());
+
 
     }
+
 }
