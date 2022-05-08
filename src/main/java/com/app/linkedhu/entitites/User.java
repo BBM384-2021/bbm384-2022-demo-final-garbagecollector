@@ -17,18 +17,23 @@ public class User {
     private String password;
     @Column(name = "Email", unique = true)
     private String email;
-    @Column(name = "Admin")
-    private boolean admin;
     @Column(name = "UserType")
     private String userType;
 
-    public User(Long id, String userName, String password, String email, boolean admin, String userType) {
+    @Column(name = "IsEnable")
+    private boolean isEnable;
+
+    @Column(name = "Salt")
+    private String salt;
+
+
+    public User(Long id, String userName, String password, String email, String userType) {
         this.id = id;
         this.userName = userName;
         this.password = password;
         this.email = email;
-        this.admin = admin;
         this.userType = userType;
+        this.isEnable = false;
     }
 
     public User() {
@@ -67,12 +72,12 @@ public class User {
         this.email = email;
     }
 
-    public boolean isAdmin() {
-        return admin;
+    public boolean isEnable() {
+        return isEnable;
     }
 
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
+    public void setEnable(boolean isEnable) {
+        this.isEnable = isEnable;
     }
 
     public String getUserType() {
@@ -81,5 +86,13 @@ public class User {
 
     public void setUserType(String userType) {
         this.userType = userType;
+    }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }
