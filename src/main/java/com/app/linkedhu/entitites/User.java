@@ -1,18 +1,18 @@
 package com.app.linkedhu.entitites;
 
-import lombok.Data;
+//import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
 @Table
-@Data
+//@Data
 public class User {
     @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "Username", unique = true)
-    private String username;
+    @Column(name = "UserName", unique = true)
+    private String userName;
     @Column(name = "Password")
     private String password;
     @Column(name = "Email", unique = true)
@@ -22,9 +22,9 @@ public class User {
     @Column(name = "UserType")
     private String userType;
 
-    public User(Long id, String username, String password, String email, boolean admin, String userType) {
+    public User(Long id, String userName, String password, String email, boolean admin, String userType) {
         this.id = id;
-        this.username = username;
+        this.userName = userName;
         this.password = password;
         this.email = email;
         this.admin = admin;
@@ -43,12 +43,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String username) {
+        this.userName = username;
     }
 
     public String getPassword() {
