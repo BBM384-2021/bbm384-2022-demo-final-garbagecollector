@@ -5,34 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="jwt created">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/786c5d49-99d9-4565-a2f9-d5270da135e8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/786c5d49-99d9-4565-a2f9-d5270da135e8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_05_2022_22_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_05_2022_22_58__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/config/SecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Likes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Likes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/request/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/request/UserRegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/security/JwtAuthenticationEntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/security/JwtAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/security/JwtTokenProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/security/JwtUserDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/UserDetailsServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/config/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Likes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Likes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/UserRegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/request/UserRegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/security/JwtAuthenticationEntryPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/security/JwtAuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/security/JwtTokenProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/security/JwtUserDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/service/UserDetailsServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,41 +73,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/a/questapp-main" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.LinkedHuApplication">
+  <component name="RunManager">
     <configuration name="LinkedHuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="LinkedHU" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.app.linkedhu.LinkedHuApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedhuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="linkedhu" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.app.linkedhu.LinkedhuApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Spring Boot.LinkedHuApplication" />
-      <item itemvalue="Spring Boot.LinkedhuApplication" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -144,6 +110,7 @@
       <workItem from="1651744268293" duration="720000" />
       <workItem from="1651868736192" duration="3387000" />
       <workItem from="1651930256932" duration="10607000" />
+      <workItem from="1652031243786" duration="30000" />
     </task>
     <task id="LOCAL-00001" summary="jwt created">
       <created>1651872085938</created>
