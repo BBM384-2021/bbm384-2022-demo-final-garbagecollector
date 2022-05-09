@@ -2,25 +2,31 @@ import Home from './compenents/Home/Home';
 import User from './compenents/User/User';
 import Auth from './compenents/Auth/Auth'
 import Navbar from './compenents/Navbar/Navbar';
-
+import Register from './compenents/Auth/Register';
 
 import './App.css';
-import { BrowserRouter, Switch, Route ,Redirect} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 function App() {
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar ></Navbar>
+        {localStorage.getItem("currentUser") == null ? null : <Navbar ></Navbar>}
         <Switch>
-          
+
           <Route exact path="/">
-          {localStorage.getItem("currentUser") == null ? <Redirect to="/auth"/>: <Home/>}
-          
+            {localStorage.getItem("currentUser") == null ? <Redirect to="/auth" /> : <Home />}
           </Route>
-          <Route exact path='/users' component={User}></Route>
+
+          <Route exact path='/users'>
+            {localStorage.getItem("currentUser") == null ? <Redirect to="http://localhost:8080/auth" /> : <User />}
+          </Route>
+
           <Route exact path="/auth">
-          {localStorage.getItem("currentUser") != null ? <Redirect to="/"/>: <Auth/>}
+            {localStorage.getItem("currentUser") != null ? <Redirect to="/" /> : <Auth />}
+          </Route>
+          <Route exact path="/register">
+            {localStorage.getItem("currentUser") != null ? <Redirect to="/" /> : <Register />}
           </Route>
 
         </Switch>
@@ -48,7 +54,7 @@ function App() {
       </Container>
     </Navbar> */
 
-  
+
 }
 
 export default App;

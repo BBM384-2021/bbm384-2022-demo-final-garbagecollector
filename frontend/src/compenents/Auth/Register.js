@@ -1,4 +1,4 @@
-import {  Button } from "@mui/material";
+import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import CssBaseline from '@mui/material/CssBaseline';
@@ -10,15 +10,17 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "./Register.css"
-
-
 const theme = createTheme();
-function Auth() {
+function Register() {
+
 
 
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [userType, setuserType] = useState("student")
+    const [email, setEmail] = useState("")
+    const [confirmPassword, setuconfirmPassword] = useState("")
 
 
 
@@ -27,6 +29,15 @@ function Auth() {
         setUsername(value)
     }
 
+    const handleEmail = (value) => {
+        setEmail(value)
+    }
+    const handleconfirmPassword = (value) => {
+        setuconfirmPassword(value)
+    }
+    const handleUserType = (value) => {
+        setuserType(value);
+    }
 
     const handlePassword = (value) => {
         setPassword(value)
@@ -41,6 +52,10 @@ function Auth() {
         body: JSON.stringify({
             userName: username,
             password: password,
+            confirmPassword: confirmPassword,
+            email: email,
+            userType: userType
+
         })
     };
     const sendRequest = (path) => {
@@ -99,9 +114,9 @@ function Auth() {
                             alignItems: 'center',
                         }}
                     >
-                        
+
                         <Typography component="h1" variant="h5">
-                            Sign in
+                            Sign Up
                         </Typography>
                         <Box component="form" noValidate sx={{ mt: 1 }}>
                             <TextField
@@ -126,19 +141,46 @@ function Auth() {
                                 id="password"
                                 autoComplete="current-password"
                             />
-                            <Button variant="contained"
+
+                            <TextField
+                                onChange={(i) => handleconfirmPassword(i.target.value)}
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="confirmPassword"
+                                label="confirmPassword"
+                                type="password"
+                                id="confirmPassword"
+                                autoComplete="current-password"
+                            /><TextField
+                                onChange={(i) => handleEmail(i.target.value)}
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="email"
+                                label="Email"
+                                type="email"
+                                id="email"
+                                autoComplete="email"
+                            />
+
+
+                            <select
+
+                                onChange={(i) => { handleUserType(i.target.value) }}>
+                                <option value={"student"}>Student</option>
+                                <option value={"academician"}>Academician</option>
+                            </select>
+                            <Button variant="contained" className="contained"
                                 style={{
                                     background: 'linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)',
                                     color: 'white'
                                 }}
-                                onClick={() => handleButton("login")}>Login</Button>
-                            <Grid container>
-
-                                <Grid item>
-                                    <Link href="/register" variant="body2">
-                                        {"Don't have an account? Sign Up"}
-                                    </Link>
-                                </Grid>
+                                onClick={() => handleButton("register")}>Register</Button> 
+                            <Grid item>
+                                <Link href="/auth" variant="body2">
+                                    {"You have already an account? Sign in"}
+                                </Link>
                             </Grid>
                         </Box>
                     </Box>
@@ -149,4 +191,4 @@ function Auth() {
     )
 }
 
-export default Auth;
+export default Register;
