@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="jwt created">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/786c5d49-99d9-4565-a2f9-d5270da135e8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_05_2022_22_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_05_2022_22_58__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/LikeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/CommentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/CommentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/PostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/PostResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/request/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/request/UserRegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/UserResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/CommentResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/CommentResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/PostResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/PostResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/UserResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/UserResponse.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +120,7 @@
       <workItem from="1652031243786" duration="121000" />
       <workItem from="1652046507681" duration="5606000" />
       <workItem from="1652138514986" duration="862000" />
-      <workItem from="1652174819288" duration="10439000" />
+      <workItem from="1652174819288" duration="13434000" />
     </task>
     <task id="LOCAL-00001" summary="jwt created">
       <created>1651872085938</created>
@@ -158,7 +143,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652052137366</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="jwt created">
+      <created>1652197310581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652197310581</updated>
+    </task>
+    <task id="LOCAL-00005" summary="jwt created">
+      <created>1652197344093</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652197344093</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,9 +175,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="jwt created" />
     <MESSAGE value="&quot;&quot;" />
     <MESSAGE value="password encryption" />
-    <option name="LAST_COMMIT_MESSAGE" value="password encryption" />
+    <MESSAGE value="jwt created" />
+    <option name="LAST_COMMIT_MESSAGE" value="jwt created" />
   </component>
 </project>
