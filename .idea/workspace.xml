@@ -4,9 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="password encryption">
+    <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="jwt created">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/786c5d49-99d9-4565-a2f9-d5270da135e8.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_05_2022_22_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_05_2022_22_58__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/CommentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/CommentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/PostResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/PostResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/entitites/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/CommentResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/CommentResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/PostResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/PostResponse.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -71,18 +92,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "spring.configuration.checksum": "fec1ca1eea3533104bc4d88f5db13cfc"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -92,11 +111,11 @@
   </component>
   <component name="RunManager">
     <configuration name="LinkedHuApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" />
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="LinkedHU" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.app.linkedhu.LinkedHuApplication" />
+      <option name="ACTIVE_PROFILES" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,6 +134,8 @@
       <workItem from="1651930256932" duration="10607000" />
       <workItem from="1652031243786" duration="121000" />
       <workItem from="1652046507681" duration="5606000" />
+      <workItem from="1652138514986" duration="862000" />
+      <workItem from="1652174819288" duration="10439000" />
     </task>
     <task id="LOCAL-00001" summary="jwt created">
       <created>1651872085938</created>

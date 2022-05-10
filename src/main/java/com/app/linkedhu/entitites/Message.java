@@ -1,6 +1,5 @@
 package com.app.linkedhu.entitites;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -10,27 +9,24 @@ import java.util.Date;
 
 @Entity
 @Table
-public class Post {
+public class Message {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="user_id", nullable=false)
+    @JoinColumn(name="sender_user_id", nullable=false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
-    User user;
-    String title;
+    User senderUser;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name="receiver_user_id", nullable=false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
+    User receiverUser;
     //@Column(columnDefinition = "text")
     String text;
     Date date;
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
     public Long getId() {
         return id;
     }
@@ -39,20 +35,20 @@ public class Post {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public User getSenderUser() {
+        return senderUser;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setSenderUser(User senderUser) {
+        this.senderUser = senderUser;
     }
 
-    public String getTitle() {
-        return title;
+    public User getReceiverUser() {
+        return receiverUser;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setReceiverUser(User receiverUser) {
+        this.receiverUser = receiverUser;
     }
 
     public String getText() {
@@ -61,5 +57,13 @@ public class Post {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }

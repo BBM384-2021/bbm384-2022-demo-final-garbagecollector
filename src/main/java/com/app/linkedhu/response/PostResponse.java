@@ -3,6 +3,7 @@ package com.app.linkedhu.response;
 import com.app.linkedhu.entitites.Post;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 @Data
 public class PostResponse {
@@ -11,6 +12,7 @@ public class PostResponse {
     String userName;
     String title;
     String text;
+    Date date;
     List<LikeResponse> postLikes;
 
     public PostResponse(Post entity, List<LikeResponse> likes) {
@@ -19,6 +21,7 @@ public class PostResponse {
         this.userName = entity.getUser().getUserName();
         this.title = entity.getTitle();
         this.text = entity.getText();
+        this.date = entity.getDate();
         this.postLikes = likes;
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
-    private UserService userService;
+    public UserService userService;
 
     public UserController(UserService userService) {
         this.userService = userService;
@@ -30,20 +30,10 @@ public class UserController {
     @GetMapping("/{userId}")
     public User getOneUser(@PathVariable Long userId) {
         return userService.getOneUserById(userId);
-        //User user = userService.getOneUserById(userId);
-        //if(user == null) {
-            //throw new UserNotFoundException();
-       // }
-       // return new UserResponse(user);
     }
 
     @PutMapping("/{userId}")
     public User updateOneUser(@PathVariable Long userId, @RequestBody User newUser) {
         return userService.updateOneUser(userId, newUser);
-    }
-
-    @DeleteMapping("/{userId}")
-    public void deleteOneUser(@PathVariable Long userId) {
-        userService.deleteById(userId);
     }
 }

@@ -6,6 +6,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table
@@ -26,6 +27,15 @@ public class Comment {
     User user;
     @Column(columnDefinition = "text")
     String text;
+    Date date;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     public Long getId() {
         return id;
