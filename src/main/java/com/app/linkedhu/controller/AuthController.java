@@ -79,6 +79,8 @@ public class AuthController {
         user.setSalt(salt);
         user.setUserType(userRegisterRequest.getUserType());
         user.setActive(false);
+        userResponse.setUserName(userRegisterRequest.getUserName());
+        userResponse.setUserType(userResponse.getUserType());
         userService.saveOneUser(user);
 
         return userResponse;
