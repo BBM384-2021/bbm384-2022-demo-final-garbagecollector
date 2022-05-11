@@ -4,8 +4,9 @@ import com.app.linkedhu.entitites.User;
 import com.app.linkedhu.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/admin")
 public class AdminController {

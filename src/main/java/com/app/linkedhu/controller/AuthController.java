@@ -6,14 +6,11 @@ import com.app.linkedhu.request.UserLoginRequest;
 import com.app.linkedhu.request.UserRegisterRequest;
 import com.app.linkedhu.response.UserResponse;
 import com.app.linkedhu.service.UserService;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
-
+import java.util.regex.Pattern;
+@CrossOrigin
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -35,22 +32,27 @@ public class AuthController {
         UserResponse userResponse = new UserResponse();
         if (user.isPresent()){
             User foundUser = user.get();
-
-            boolean passwordMatch = PasswordUtils.verifyUserPassword(userLoginRequest.getPassword(), foundUser.getPassword(), foundUser.getSalt());
-            if (passwordMatch){
-                userResponse.setId(foundUser.getId());
-                userResponse.setUserName(foundUser.getUserName());
-                userResponse.setUserType(foundUser.getUserType());
-                userResponse.setMsg("Login is successful");
-                return userResponse;
-            }else {
-                userResponse.setMsg("Invalid Password");
-                return null;
-            }
+                if(user.get().isActive()){
+                    boolean passwordMatch = PasswordUtils.verifyUserPassword(userLoginRequest.getPassword(), foundUser.getPassword(), foundUser.getSalt());
+                    if (passwordMatch){
+                        userResponse.setId(foundUser.getId());
+                        userResponse.setUserName(foundUser.getUserName());
+                        userResponse.setUserType(foundUser.getUserType());
+                        userResponse.setMsg("Login is successful");
+                        return userResponse;
+                    }else {
+                        userResponse.setMsg("Invalid Password");
+                        return userResponse;
+                    }
+                }
+                else{
+                    userResponse.setMsg("you are not enable to login. Wait for admin approval");
+                    return userResponse;
+                }
         }
         else
             userResponse.setMsg("There is not an existing user with user name '"+userLoginRequest.getUserName()+"'");
-            return null;
+            return userResponse;
     }
 
     @PostMapping("/register")
@@ -66,6 +68,9 @@ public class AuthController {
             userResponse.setMsg("password does not match");
             return userResponse;
         }
+        else if(!checkEmail(userRegisterRequest.getEmail())){
+            userResponse.setMsg("invalid Email");
+        }
         user.setUserName(userRegisterRequest.getUserName());
         user.setEmail(userRegisterRequest.getEmail());
         String salt = PasswordUtils.getSalt(30);
@@ -73,12 +78,25 @@ public class AuthController {
         user.setPassword(mySecurePassword);
         user.setSalt(salt);
         user.setUserType(userRegisterRequest.getUserType());
-        user.setEnable(false);
+        user.setActive(false);
+        userResponse.setUserName(userRegisterRequest.getUserName());
+        userResponse.setUserType(userResponse.getUserType());
         userService.saveOneUser(user);
 
         return userResponse;
         //email unik, confirm password eşleşcek, username unik, tüm bilgiler dolu olcak, şifre min 4 hane,
     }
+    public boolean checkEmail(String email) {
+        // utilizing pattern matching to check for a valid email
+        String emailRegex = "^[a-zA-Z0-9+&*-]+(?:\\."+
+                "[a-zA-Z0-9+&-]+)@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
 
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
+    }
 
 }

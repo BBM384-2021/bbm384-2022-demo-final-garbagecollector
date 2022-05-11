@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment="jwt created">
+    <list default="true" id="9fa4248e-a35e-4e58-a093-f753b5b870f8" name="Changes" comment=".">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/request/UserRegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/request/UserRegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/response/UserResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/entitites/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/linkedhu/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/UserResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/response/UserResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/linkedhu/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +30,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="kadir" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -121,6 +122,8 @@
       <workItem from="1652046507681" duration="5606000" />
       <workItem from="1652138514986" duration="862000" />
       <workItem from="1652174819288" duration="13434000" />
+      <workItem from="1652216401697" duration="2185000" />
+      <workItem from="1652218960200" duration="1837000" />
     </task>
     <task id="LOCAL-00001" summary="jwt created">
       <created>1651872085938</created>
@@ -157,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652197344093</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=".">
+      <created>1652200266270</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652200266270</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +188,7 @@
     <MESSAGE value="&quot;&quot;" />
     <MESSAGE value="password encryption" />
     <MESSAGE value="jwt created" />
-    <option name="LAST_COMMIT_MESSAGE" value="jwt created" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
