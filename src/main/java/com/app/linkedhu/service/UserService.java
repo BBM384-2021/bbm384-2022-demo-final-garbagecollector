@@ -50,4 +50,14 @@ public class UserService {
         return userRepository.getByEmail(email);
 
     }
+
+    public void enableUser(Long userId) {
+        User user = userRepository.getById(userId);
+        user.setActive(true);
+        userRepository.save(user);
+    }
+
+    public List<User> getAllDisabled() {
+        return userRepository.getAllByActiveFalse();
+    }
 }

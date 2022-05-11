@@ -20,8 +20,8 @@ public class User {
     @Column(name = "UserType")
     private String userType;
 
-    @Column(name = "IsEnable")
-    private boolean isEnable;
+    @Column(name = "Active")
+    private boolean active;
 
     @Column(name = "Salt")
     private String salt;
@@ -33,7 +33,7 @@ public class User {
         this.password = password;
         this.email = email;
         this.userType = userType;
-        this.isEnable = false;
+        this.active = false;
     }
 
     public User() {
@@ -72,12 +72,12 @@ public class User {
         this.email = email;
     }
 
-    public boolean isEnable() {
-        return isEnable;
+    public boolean isActive() {
+        return active;
     }
 
-    public void setEnable(boolean isEnable) {
-        this.isEnable = isEnable;
+    public void setActive(boolean isEnable) {
+        this.active = isEnable;
     }
 
     public String getUserType() {

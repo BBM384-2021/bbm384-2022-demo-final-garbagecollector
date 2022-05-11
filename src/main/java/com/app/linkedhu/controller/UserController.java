@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -26,6 +27,8 @@ public class UserController {
     public User createUser(@RequestBody User newUser) {
         return userService.saveOneUser(newUser);
     }
+
+
 
     @GetMapping("/{userId}")
     public User getOneUser(@PathVariable Long userId) {
