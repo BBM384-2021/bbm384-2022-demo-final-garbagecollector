@@ -47,7 +47,7 @@ public class AuthController {
                     }
                 }
                 else{
-                    userResponse.setMsg("you are not enable to login. Wait for admin approval");
+                    userResponse.setMsg("You are not enable to login. Wait for admin approval");
                     return userResponse;
                 }
         }
