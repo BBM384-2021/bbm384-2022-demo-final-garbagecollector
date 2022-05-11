@@ -39,6 +39,7 @@ public class AuthController {
                         userResponse.setUserName(foundUser.getUserName());
                         userResponse.setUserType(foundUser.getUserType());
                         userResponse.setMsg("Login is successful");
+                        userResponse.setEnable(foundUser.isActive());
                         return userResponse;
                     }else {
                         userResponse.setMsg("Invalid Password");

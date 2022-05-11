@@ -8,6 +8,16 @@ public class UserResponse {
     String userType;
     String msg;
 
+    Boolean enable;
+
+    public Boolean getEnable() {
+        return enable;
+    }
+
+    public void setEnable(Boolean enable) {
+        this.enable = enable;
+    }
+
     public Long getId() {
         return id;
     }
