@@ -3,6 +3,7 @@ package com.app.linkedhu.controller;
 import com.app.linkedhu.entitites.Post;
 import com.app.linkedhu.request.PostCreateRequest;
 import com.app.linkedhu.request.PostUpdateRequest;
+import com.app.linkedhu.response.PostResponse;
 import com.app.linkedhu.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,7 +23,7 @@ public class PostController {
     }
 
     @GetMapping
-    public List<Post> getAllPosts(@RequestParam(name = "userId") Optional<Long> userId) {
+    public List<PostResponse> getAllPosts(@RequestParam(name = "userId") Optional<Long> userId) {
         return postService.getAllPosts(userId);
     }
 
@@ -33,8 +34,8 @@ public class PostController {
 
 
     @GetMapping("/{postId}")
-    public Post getOnePost(@PathVariable Long postId) {
-        return postService.getOnePostById(postId);
+    public PostResponse getOnePost(@PathVariable Long postId) {
+        return postService.getOnePostByIdWithLikesWithComments(postId);
     }
 
     @PutMapping("/{postId}")

@@ -5,27 +5,51 @@ import com.app.linkedhu.entitites.User;
 import com.app.linkedhu.repository.PostRepository;
 import com.app.linkedhu.request.PostCreateRequest;
 import com.app.linkedhu.request.PostUpdateRequest;
+import com.app.linkedhu.response.CommentResponse;
+import com.app.linkedhu.response.LikeResponse;
+import com.app.linkedhu.response.PostResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class PostService {
 
     private PostRepository postRepository;
     private UserService userService;
+    private LikeService likeService;
+    private CommentService commentService;
 
     public PostService(PostRepository postRepository, UserService userService) {
         this.postRepository = postRepository;
         this.userService = userService;
     }
 
-    public List<Post> getAllPosts(Optional<Long> userId) {
-        if(userId.isPresent()){
-            return postRepository.findByUserId(userId.get());
-        }
-        return postRepository.findAll();
+    @Autowired
+    public void setLikeService(@Lazy LikeService likeService) {
+        this.likeService = likeService;
+    }
+
+    @Autowired
+    public void setCommentService(@Lazy CommentService commentService) {
+        this.commentService = commentService;
+    }
+
+    public List<PostResponse> getAllPosts(Optional<Long> userId) {
+        List<Post> list;
+        if(userId.isPresent()) {
+            list = postRepository.findByUserId(userId.get());
+        }else
+            list = new ArrayList<>();
+        return list.stream().map(p -> {
+            List<CommentResponse> comments = commentService.getAllCommentsWithParam(Optional.ofNullable(null), Optional.of(p.getId()));
+            List<LikeResponse> likes = likeService.getAllLikesWithParam(Optional.ofNullable(null), Optional.of(p.getId()));
+            return new PostResponse(p, likes, comments);}).collect(Collectors.toList());
     }
 
     public Post createOnePost(PostCreateRequest newPostRequest) {
@@ -36,6 +60,7 @@ public class PostService {
         toSave.setId(newPostRequest.getId());
         toSave.setText(newPostRequest.getText());
         toSave.setTitle(newPostRequest.getTitle());
+        toSave.setDate(new java.util.Date());
         toSave.setUser(user);
         return postRepository.save(toSave);
     }
@@ -50,6 +75,13 @@ public class PostService {
             return toUpdate;
         }
         return null;
+    }
+
+    public PostResponse getOnePostByIdWithLikesWithComments(Long postId) {
+        Post post = postRepository.findById(postId).orElse(null);
+        List<CommentResponse> comments = commentService.getAllCommentsWithParam(Optional.ofNullable(null), Optional.of(postId));
+        List<LikeResponse> likes = likeService.getAllLikesWithParam(Optional.ofNullable(null), Optional.of(postId));
+        return new PostResponse(post, likes, comments);
     }
 
     public void deleteOnePostById(Long postId) {

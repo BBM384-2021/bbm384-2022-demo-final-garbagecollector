@@ -9,6 +9,7 @@ import com.app.linkedhu.request.CommentUpdateRequest;
 import com.app.linkedhu.response.CommentResponse;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -36,7 +37,7 @@ public class CommentService {
         }else if(postId.isPresent()) {
             comments = commentRepository.findByPostId(postId.get());
         }else
-            comments = commentRepository.findAll();
+            comments = new ArrayList<Comment>();
         return comments.stream().map(comment -> new CommentResponse(comment)).collect(Collectors.toList());
     }
 
@@ -52,6 +53,7 @@ public class CommentService {
             commentToSave.setId(request.getId());
             commentToSave.setPost(post);
             commentToSave.setUser(user);
+            commentToSave.setDate(new java.util.Date());
             commentToSave.setText(request.getText());
             return commentRepository.save(commentToSave);
         }else
