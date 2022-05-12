@@ -33,11 +33,17 @@ public class FollowController {
     public FollowResponse isFollowed(@RequestParam(name = "senderUserId") Optional<Long> senderUserId,
                                      @RequestParam(name = "receiverUserId") Optional<Long> receiverUserId){
         Follow follow = followService.getOneFollow(senderUserId, receiverUserId);
+        FollowResponse followResponse = new FollowResponse();
+        System.out.println(follow);
         if(follow!=null){
-            return new FollowResponse(follow.getId(),true);
+            followResponse.setId(follow.getId());
+            followResponse.setFollowed(true);
+            return followResponse;
         }
         else{
-            return new FollowResponse(null,false);
+            followResponse.setId(null);
+            followResponse.setFollowed(false);
+            return followResponse;
         }
     }
 

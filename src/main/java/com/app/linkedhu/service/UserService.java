@@ -46,6 +46,9 @@ public class UserService {
                     if(newUser.getEmail() != null){
                         foundUser.setEmail(newUser.getEmail());
                     }
+                    if(newUser.getAvatar() != -1){
+                        foundUser.setAvatar(newUser.getAvatar());
+                    }
                     userRepository.save(foundUser);
                     return foundUser;
                 }

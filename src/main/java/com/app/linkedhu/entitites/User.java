@@ -14,33 +14,29 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "UserName", unique = true)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String userName;
     @Column(name = "Password")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String password;
     @Column(name = "Email", unique = true)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String email;
     @Column(name = "UserType")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String userType;
-
+    @Column(name = "AvatarId")
+    private int avatar;
     @Column(name = "Active")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private boolean active;
     @Column(name = "Salt")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String salt;
 
 
-    public User(Long id, String userName, String password, String email, String userType) {
+    public User(Long id, String userName, String password, String email, String userType, int avatar) {
         this.id = id;
         this.userName = userName;
         this.password = password;
         this.email = email;
         this.userType = userType;
         this.active = false;
+        this.avatar = avatar;
     }
 
     public User() {
@@ -101,5 +97,13 @@ public class User {
 
     public void setSalt(String salt) {
         this.salt = salt;
+    }
+
+    public int getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(int avatar) {
+        this.avatar = avatar;
     }
 }

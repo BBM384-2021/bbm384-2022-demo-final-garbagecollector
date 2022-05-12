@@ -3,6 +3,7 @@ package com.app.linkedhu.request;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class MailCreateRequest {
@@ -12,4 +13,5 @@ public class MailCreateRequest {
     Date date;
     Long senderUserId;
     Long receiverUserId;
+    List<Long> AllId;
 }
