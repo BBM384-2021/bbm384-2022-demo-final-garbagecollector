@@ -2,6 +2,8 @@ package com.app.linkedhu.entitites;
 
 //import lombok.Data;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,18 +14,23 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(name = "UserName", unique = true)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String userName;
     @Column(name = "Password")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String password;
     @Column(name = "Email", unique = true)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String email;
     @Column(name = "UserType")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String userType;
 
     @Column(name = "Active")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private boolean active;
-
     @Column(name = "Salt")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private String salt;
 
 

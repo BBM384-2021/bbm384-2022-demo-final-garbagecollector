@@ -32,7 +32,6 @@ public class MessageService {
                     .collect(Collectors.toList());
             return newList;
         }
-
         return newList;
     }
 

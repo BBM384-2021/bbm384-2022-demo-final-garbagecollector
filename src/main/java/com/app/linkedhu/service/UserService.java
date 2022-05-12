@@ -1,5 +1,6 @@
 package com.app.linkedhu.service;
 
+import com.app.linkedhu.config.PasswordUtils;
 import com.app.linkedhu.entitites.User;
 import com.app.linkedhu.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,10 @@ import java.util.Optional;
 public class UserService {
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private PasswordUtils passwordUtils;
+
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
@@ -26,18 +31,26 @@ public class UserService {
         return userRepository.getByUserName(userName);
     }
     public User updateOneUser(Long userId, User newUser) {
-        Optional<User> user = Optional.of(userRepository.getById(userId));
-        if(user.isPresent()){
-            User foundUser = user.get();
-            foundUser.setUserName(newUser.getUserName());
-            foundUser.setPassword(newUser.getPassword());
-            foundUser.setEmail(newUser.getEmail());
-            foundUser.setUserType(newUser.getUserType());
-            userRepository.save(foundUser);
-            return foundUser;
-        }
-        else{
-             return null;
+                Optional<User> user = Optional.of(userRepository.getById(userId));
+                if(user.isPresent()){
+                    User foundUser = user.get();
+                    if(newUser.getUserName() != null){
+                        foundUser.setUserName(newUser.getUserName());
+                    }
+                    if(newUser.getPassword() != null){
+                        String salt = PasswordUtils.getSalt(30);
+                        String mySecurePassword = PasswordUtils.generateSecurePassword(newUser.getPassword(), salt);
+                        foundUser.setPassword(mySecurePassword);
+                        foundUser.setSalt(salt);
+                    }
+                    if(newUser.getEmail() != null){
+                        foundUser.setEmail(newUser.getEmail());
+                    }
+                    userRepository.save(foundUser);
+                    return foundUser;
+                }
+                else{
+                    return null;
         }
     }
 
