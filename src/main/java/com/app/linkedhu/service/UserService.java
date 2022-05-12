@@ -76,4 +76,7 @@ public class UserService {
     public List<User> getAllDisabled() {
         return userRepository.getAllByActiveFalse();
     }
+
+    public List<User> getAllEnabled() {return userRepository.getAllByActiveTrue();
+    }
 }

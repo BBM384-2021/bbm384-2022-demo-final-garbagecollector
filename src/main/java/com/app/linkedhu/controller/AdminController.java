@@ -23,9 +23,14 @@ public class AdminController {
     }
 
 
-    @GetMapping()
+    @GetMapping("/disableList")
     public List<User> getAllDisabled(){
         return userService.getAllDisabled();
+    }
+
+    @GetMapping("enableList")
+    public List<User> getAllEnabled(){
+        return userService.getAllEnabled();
     }
 
     @GetMapping("/excel")
