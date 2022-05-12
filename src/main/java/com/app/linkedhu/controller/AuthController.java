@@ -39,6 +39,7 @@ public class AuthController {
                         userResponse.setUserName(foundUser.getUserName());
                         userResponse.setUserType(foundUser.getUserType());
                         userResponse.setMsg("Login is successful");
+                        userResponse.setEnable(foundUser.isActive());
                         return userResponse;
                     }else {
                         userResponse.setMsg("Invalid Password");
@@ -46,7 +47,7 @@ public class AuthController {
                     }
                 }
                 else{
-                    userResponse.setMsg("you are not enable to login. Wait for admin approval");
+                    userResponse.setMsg("You are not enable to login. Wait for admin approval");
                     return userResponse;
                 }
         }
