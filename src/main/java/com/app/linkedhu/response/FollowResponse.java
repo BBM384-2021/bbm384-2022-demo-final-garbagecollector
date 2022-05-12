@@ -7,8 +7,19 @@ public class FollowResponse {
     Long id;
     boolean isFollowed;
 
-    public FollowResponse(Long id, boolean isFollowed) {
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
         this.id = id;
-        this.isFollowed = isFollowed;
+    }
+
+    public boolean isFollowed() {
+        return isFollowed;
+    }
+
+    public void setFollowed(boolean followed) {
+        isFollowed = followed;
     }
 }
