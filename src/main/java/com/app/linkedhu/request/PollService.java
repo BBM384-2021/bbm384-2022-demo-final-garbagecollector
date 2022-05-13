@@ -5,14 +5,11 @@ import com.app.linkedhu.entitites.Poll;
 import com.app.linkedhu.entitites.User;
 import com.app.linkedhu.repository.ChoiceRepository;
 import com.app.linkedhu.repository.PollRepository;
-import com.app.linkedhu.response.CommentResponse;
 import com.app.linkedhu.response.PollResponse;
-import com.app.linkedhu.response.PostResponse;
 import com.app.linkedhu.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PollService {
@@ -58,6 +55,20 @@ public class PollService {
         Poll poll = pollRepository.getById(pollId);
         List<Choice> choices = choiceRepository.findAllByPollId(pollId);
         PollResponse pollResponse = new PollResponse();
+        pollResponse.setId(pollId);
+        pollResponse.setTitle(poll.getTitle());
+        pollResponse.setUserId(poll.getSenderUser().getId());
+        pollResponse.setChoices(choices);
+        pollResponse.setUserName(poll.getSenderUser().getUserName());
+        return pollResponse;
+    }
+
+    public PollResponse getOnePoll(Long pollId) {
+        Poll poll = pollRepository.findById(pollId).orElse(null);
+        List<Choice> choices = choiceRepository.findAllByPollId(pollId);
+        PollResponse pollResponse = new PollResponse();
+
+        pollResponse.setId(pollId);
         pollResponse.setTitle(poll.getTitle());
         pollResponse.setUserId(poll.getSenderUser().getId());
         pollResponse.setChoices(choices);
