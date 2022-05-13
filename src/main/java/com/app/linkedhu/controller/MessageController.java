@@ -19,8 +19,8 @@ public class MessageController {
     }
 
     @GetMapping
-    public List<Message> getAllMessages(@RequestParam(name = "userId") Optional<Long> userId) {
-        return messageService.getAllMessages(userId);
+    public List<Message> getAllMessages(@RequestParam(name = "senderUserId") Optional<Long> senderUserId, @RequestParam(name = "receiverUserId") Optional<Long> receiverUserId) {
+        return messageService.getAllMessages(senderUserId, receiverUserId);
     }
 
     @PostMapping

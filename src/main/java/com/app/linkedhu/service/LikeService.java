@@ -60,4 +60,10 @@ public class LikeService {
     }
 
 
+    public void deleteOneLikeByUserId(Optional<Long> userId, Optional<Long> postId) {
+        if(userId.isPresent()&postId.isPresent()){
+            Likes like = likeRepository.getByUserIdAndPostId(userId.get(), postId.get());
+            likeRepository.deleteById(like.getId());
+        }
+    }
 }

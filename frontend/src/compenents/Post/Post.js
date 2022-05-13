@@ -103,12 +103,17 @@ function Post(props) {
             postId: postId,
             userId : localStorage.getItem("currentUser"),
         })
-            .then((res) => res.json())
-            .catch((err) => console.log(err))
+            .then((res) => {
+                res.json();
+
+            })
+            .catch((err) => {
+                console.log(err);
+            })
     }
 
     const deleteLike = () => {
-        DeleteWithAuth("/likes/"+likeId)
+        DeleteWithAuth("/likes/?userId="+localStorage.getItem("currentUser")+"&postId="+postId)
             .catch((err) => console.log(err))
     }
 

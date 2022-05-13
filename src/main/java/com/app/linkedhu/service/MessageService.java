@@ -6,10 +6,7 @@ import com.app.linkedhu.repository.MessageRepository;
 import com.app.linkedhu.request.MessageCreateRequest;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -23,13 +20,15 @@ public class MessageService {
         this.userService = userService;
     }
 
-    public List<Message> getAllMessages(Optional<Long> userId){
+    public List<Message> getAllMessages(Optional<Long> senderUserId, Optional<Long> receiverUserId){
         List<Message> newList = new ArrayList<>();
-        if(userId.isPresent()){
-            List<Message> sent = messageRepository.findBySenderUserId(userId.get());
-            List<Message> received = messageRepository.findByReceiverUserId(userId.get());
+        if(senderUserId.isPresent() | receiverUserId.isPresent()){
+            List<Message> sent = messageRepository.findBySenderUserIdAndReceiverUserId(senderUserId.get(), receiverUserId.get());
+            List<Message> received = messageRepository.findBySenderUserIdAndReceiverUserId(receiverUserId.get(), senderUserId.get());
             newList = Stream.of(sent, received).flatMap(Collection::stream)
                     .collect(Collectors.toList());
+
+            newList.sort(Comparator.comparing(Message::getDate));
             return newList;
         }
         return newList;
