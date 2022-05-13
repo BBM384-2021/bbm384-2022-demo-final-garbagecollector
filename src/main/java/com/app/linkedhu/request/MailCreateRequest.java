@@ -10,8 +10,15 @@ public class MailCreateRequest {
     Long id;
     String title;
     String text;
-    Date date;
     Long senderUserId;
     Long receiverUserId;
-    List<Long> AllId;
+    Boolean isMass;
+
+    public Boolean isMass() {
+        return isMass;
+    }
+
+    public void setMass(Boolean mass) {
+        isMass = mass;
+    }
 }

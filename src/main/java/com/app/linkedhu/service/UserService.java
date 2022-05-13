@@ -25,7 +25,7 @@ public class UserService {
     }
 
     public User getOneUserById(Long userId) {
-        return userRepository.getById(userId);
+        return userRepository.findById(userId).orElse(null);
     }
     public User getOneUserByUserName(String userName) {
         return userRepository.getByUserName(userName);
@@ -59,6 +59,10 @@ public class UserService {
 
     public void deleteById(Long userId) {
         userRepository.deleteById(userId);
+    }
+
+    public List<User> getAllUserByUserName(String userName){
+        return userRepository.search(userName);
     }
 
 

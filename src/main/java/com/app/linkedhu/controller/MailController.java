@@ -28,11 +28,16 @@ public class MailController {
         return mailService.getAllReceivedMails(userId);
     }
 
-
     @PostMapping
-    public Mail createOneMail(@RequestBody MailCreateRequest mailCreateRequest) {
-        return mailService.createOneMail(mailCreateRequest);
+    public Mail createMail(@RequestBody MailCreateRequest mailCreateRequest) {
+        if(mailCreateRequest.getReceiverUserId() == null){
+            mailCreateRequest.setReceiverUserId(Long.valueOf(0));
+        }
+        System.out.println(mailCreateRequest.isMass());
+        return mailService.createMail(mailCreateRequest);
     }
+
+
 
     @GetMapping("/{mailId}")
     public Mail getOneMail(@PathVariable Long mailId) {

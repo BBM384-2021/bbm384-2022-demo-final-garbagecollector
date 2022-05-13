@@ -1,18 +1,14 @@
 package com.app.linkedhu.service;
 
 import com.app.linkedhu.entitites.Mail;
-import com.app.linkedhu.entitites.Message;
 import com.app.linkedhu.entitites.User;
 import com.app.linkedhu.repository.MailRepository;
 import com.app.linkedhu.request.MailCreateRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class MailService {
@@ -43,12 +39,31 @@ public class MailService {
     }
 
 
+    public Mail createMail(MailCreateRequest mailCreateRequest){
+        User senderUser = userService.getOneUserById(mailCreateRequest.getSenderUserId());
+        if(mailCreateRequest.isMass()){
+            List<User> users = userService.getAllUsers();
+            users.remove(userService.getOneUserById(senderUser.getId()));
+            if(senderUser != null){
+                for(User user : users){
+                    mailCreateRequest.setReceiverUserId(user.getId());
+                    createOneMail(mailCreateRequest);
+                }
+            }
+            return new Mail();
+        }
+        else{
+           return createOneMail(mailCreateRequest);
+        }
+    }
+
     public Mail createOneMail(MailCreateRequest mailCreateRequest){
         User senderUser = userService.getOneUserById(mailCreateRequest.getSenderUserId());
         User receiverUser = userService.getOneUserById(mailCreateRequest.getReceiverUserId());
         if(senderUser==null | receiverUser == null){
             return null;
         }
+
         Mail toSave = new Mail();
         toSave.setId(mailCreateRequest.getId());
         toSave.setText(mailCreateRequest.getText());
@@ -57,6 +72,15 @@ public class MailService {
         toSave.setSenderUser(senderUser);
         toSave.setReceiverUser(receiverUser);
         return mailRepository.save(toSave);
+        /*User senderUser = userService.getOneUserById(mailCreateRequest.getSenderUserId());
+        List<User> users = userService.getAllUsers();
+        users.remove(userService.getOneUserById(senderUser.getId()));
+        if(senderUser != null){
+            for(User user : users){
+                mailCreateRequest.setReceiverUserId(user.getId());
+                createOneMail(mailCreateRequest);
+            }
+        }*/
     }
     public void deleteOneMailById(Long mailId){
         mailRepository.deleteById(mailId);
