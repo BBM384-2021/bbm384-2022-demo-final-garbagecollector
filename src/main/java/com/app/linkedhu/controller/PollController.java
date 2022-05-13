@@ -5,8 +5,6 @@ import com.app.linkedhu.entitites.Poll;
 import com.app.linkedhu.request.PollCreateRequest;
 import com.app.linkedhu.request.PollService;
 import com.app.linkedhu.response.PollResponse;
-import com.app.linkedhu.response.PostResponse;
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -32,6 +30,12 @@ public class PollController {
     }
 
     @GetMapping()
+    public PollResponse getOnePoll(@RequestParam("pollId") Long pollId){
+        return pollService.getOnePoll(pollId);
+    }
+
+
+    @GetMapping("/results")
     public PollResponse getResults(@RequestParam("pollId") Long pollId){
         return pollService.getResults(pollId);
     }
