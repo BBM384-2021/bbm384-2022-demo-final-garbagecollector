@@ -3,6 +3,7 @@ import User from './compenents/User/User';
 import Auth from './compenents/Auth/Auth'
 import Navbar from './compenents/Navbar/Navbar';
 import Register from './compenents/Auth/Register';
+import Email from './compenents/Email/Email';
 import React from 'react';
 import './App.css';
 import Admin from './compenents/User/Admin';
@@ -10,32 +11,36 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 function App() {
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        {localStorage.getItem("currentUser") == null ? null : <Navbar ></Navbar>}
-        <Switch>
+      <div className="App">
+        <BrowserRouter>
+          {localStorage.getItem("currentUser") == null ? null : <Navbar ></Navbar>}
+          <Switch>
 
-          <Route exact path="/admin">
-            {localStorage.getItem("currentUser") == null || localStorage.getItem("userType")!=="admin" ? <Redirect to="/" /> : <Admin />}
-          </Route>
-          <Route exact path="/">
-            {localStorage.getItem("currentUser") == null ? <Redirect to="/auth" /> : <Home />}
-          </Route>
+            <Route exact path="/admin">
+              {localStorage.getItem("currentUser") == null || localStorage.getItem("userType")!=="admin" ? <Redirect to="/" /> : <Admin />}
+            </Route>
 
-          <Route exact path='/users'>
-            {localStorage.getItem("currentUser") == null ? <Redirect to="http://localhost:8080/auth" /> : <User />}
-          </Route>
+            <Route exact path="/">
+              {localStorage.getItem("currentUser") == null ? <Redirect to="/auth" /> : <Home />}
+            </Route>
 
-          <Route exact path="/auth">
-            {localStorage.getItem("currentUser") != null ? <Redirect to="/" /> : <Auth />}
-          </Route>
-          <Route exact path="/register">
-            {localStorage.getItem("currentUser") != null ? <Redirect to="/" /> : <Register />}
-          </Route>
+            <Route exact path="/users/:userId"> <User /> </Route>
 
-        </Switch>
-      </BrowserRouter>
-    </div>
+            <Route exact path="/auth">
+              {localStorage.getItem("currentUser") != null ? <Redirect to="/" /> : <Auth />}
+            </Route>
+
+            <Route exact path="/register">
+              {localStorage.getItem("currentUser") != null ? <Redirect to="/" /> : <Register />}
+            </Route>
+
+            <Route exact path="/emails/:userId">
+                {localStorage.getItem("currentUser") == null ? <Redirect to="/auth" /> : <Email />}
+            </Route>
+
+          </Switch>
+        </BrowserRouter>
+      </div>
   );
   /* return (
     <Navbar bg="light" expand="lg">
@@ -62,3 +67,8 @@ function App() {
 }
 
 export default App;
+
+/* <Route exact path='/users'>
+              {localStorage.getItem("currentUser") == null ? <Redirect to="http://localhost:8080/auth" /> : <User />}
+            </Route>
+            */

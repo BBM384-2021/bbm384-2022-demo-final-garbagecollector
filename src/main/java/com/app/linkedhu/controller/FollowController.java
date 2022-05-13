@@ -57,7 +57,7 @@ public class FollowController {
         return followService.getOneCurrentFollow(followId);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{followId}")
     public void deleteOneFollow(Long followId){
         followService.DeleteOneFollow(followId);
     }

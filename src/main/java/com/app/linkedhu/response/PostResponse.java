@@ -14,9 +14,8 @@ public class PostResponse {
     String text;
     Date date;
     List<LikeResponse> postLikes;
-    List<CommentResponse> postComments;
 
-    public PostResponse(Post entity, List<LikeResponse> likes, List<CommentResponse> comments) {
+    public PostResponse(Post entity, List<LikeResponse> likes) {
         this.id = entity.getId();
         this.userId = entity.getUser().getId();
         this.userName = entity.getUser().getUserName();
@@ -24,6 +23,5 @@ public class PostResponse {
         this.text = entity.getText();
         this.date = entity.getDate();
         this.postLikes = likes;
-        this.postComments = comments;
     }
 }

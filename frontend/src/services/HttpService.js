@@ -30,8 +30,7 @@ export const PutWithAuth = (url, body) => {
     var request = fetch(url,  {
         method: "PUT",
         headers: {
-          "Content-Type": "application/json",
-          "Authorization" : localStorage.getItem("tokenKey"),
+          "Content-Type": "application/json"
         },
         body : JSON.stringify(body),
       })
@@ -45,7 +44,7 @@ export const GetWithAuth = (url) => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "Authorization" : localStorage.getItem("tokenKey"),
+
         },
       })
 
@@ -58,7 +57,7 @@ export const DeleteWithAuth = (url) => {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-          "Authorization" : localStorage.getItem("tokenKey"),
+
         },
       })
 
@@ -79,3 +78,4 @@ export const RefreshToken = () => {
   })
   return request
 }
+

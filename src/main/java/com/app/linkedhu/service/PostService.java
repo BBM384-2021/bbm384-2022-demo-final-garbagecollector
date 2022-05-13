@@ -47,9 +47,8 @@ public class PostService {
         }else
             list = new ArrayList<>();
         return list.stream().map(p -> {
-            List<CommentResponse> comments = commentService.getAllCommentsWithParam(Optional.ofNullable(null), Optional.of(p.getId()));
             List<LikeResponse> likes = likeService.getAllLikesWithParam(Optional.ofNullable(null), Optional.of(p.getId()));
-            return new PostResponse(p, likes, comments);}).collect(Collectors.toList());
+            return new PostResponse(p, likes);}).collect(Collectors.toList());
     }
 
     public Post createOnePost(PostCreateRequest newPostRequest) {
@@ -81,7 +80,7 @@ public class PostService {
         Post post = postRepository.findById(postId).orElse(null);
         List<CommentResponse> comments = commentService.getAllCommentsWithParam(Optional.ofNullable(null), Optional.of(postId));
         List<LikeResponse> likes = likeService.getAllLikesWithParam(Optional.ofNullable(null), Optional.of(postId));
-        return new PostResponse(post, likes, comments);
+        return new PostResponse(post, likes);
     }
 
     public void deleteOnePostById(Long postId) {
