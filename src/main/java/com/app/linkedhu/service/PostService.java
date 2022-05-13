@@ -45,7 +45,7 @@ public class PostService {
         if(userId.isPresent()) {
             list = postRepository.findByUserId(userId.get());
         }else
-            list = new ArrayList<>();
+            list = postRepository.findAll();
         return list.stream().map(p -> {
             List<LikeResponse> likes = likeService.getAllLikesWithParam(Optional.ofNullable(null), Optional.of(p.getId()));
             return new PostResponse(p, likes);}).collect(Collectors.toList());

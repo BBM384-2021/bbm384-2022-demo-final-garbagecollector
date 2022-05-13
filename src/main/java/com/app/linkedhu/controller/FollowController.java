@@ -58,7 +58,7 @@ public class FollowController {
     }
 
     @DeleteMapping("/{followId}")
-    public void deleteOneFollow(Long followId){
+    public void deleteOneFollow(@PathVariable(name = "followId") Long followId){
         followService.DeleteOneFollow(followId);
     }
 }

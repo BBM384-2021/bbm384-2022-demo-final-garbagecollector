@@ -69,6 +69,7 @@ function User() {
     }
 
     const deleteFollow = () => {
+        console.log(followId)
         DeleteWithAuth("http://localhost:8080/follows/" + followId)
     }
 
