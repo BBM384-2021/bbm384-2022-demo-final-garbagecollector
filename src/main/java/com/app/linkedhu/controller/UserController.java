@@ -35,6 +35,11 @@ public class UserController {
         return userService.getOneUserById(userId);
     }
 
+    @GetMapping("/search")
+    public List<User> search(@RequestParam(name = "a") String a){
+        return userService.getAllUserByUserName(a);
+    }
+
     @PutMapping("/{userId}")
     public User updateOneUser(@PathVariable Long userId, @RequestBody User newUser) {
         return userService.updateOneUser(userId, newUser);
